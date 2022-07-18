@@ -66,4 +66,6 @@ nnoremap <leader><cr> <c-]>
 nnoremap <c-a> <Nop>
 nnoremap <c-x> <Nop>
 
+au BufEnter *.tsx set ft=typescriptreact
+
 lua require ("lsp")
