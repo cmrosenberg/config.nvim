@@ -66,6 +66,10 @@ nnoremap <leader><cr> <c-]>
 nnoremap <c-a> <Nop>
 nnoremap <c-x> <Nop>
 
+nnoremap <leader>s :Telescope live_grep<cr>
+nnoremap <leader>f :Telescope find_files<cr>
+vnoremap <localleader>s "zy:Telescope grep_string default_text=<C-r>z<cr>
+
 au BufEnter *.tsx set ft=typescriptreact
 
 lua require ("lsp")
