@@ -32,6 +32,9 @@ au BufEnter *.html nnoremap <localleader>p :Prettier<cr>
 au BufEnter *.md nnoremap <localleader>p :Prettier<cr>
 
 au BufEnter *.py nnoremap <localleader>p :%!black -q -<cr>
+
 au BufEnter *.go nnoremap <localleader>p :%!gofmt<cr>
+au BufEnter *.go set noexpandtab
+au BufEnter *.go set tabstop=4 | set shiftwidth=4
 
 colo dracula
