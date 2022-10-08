@@ -19,9 +19,14 @@ inoremap jk <esc>
 
 set expandtab
 
+set splitbelow
+set splitright
+
+"set cursorline
+
 " Extremely crude mappings for timestamps.
-:nnoremap <leader>t o<Esc>"=strftime("%Y, Week %V, %A %B %d at %X %Z: ")<C-M>pA
-:nnoremap <leader>T O<Esc>"=strftime("%Y, Week %V, %A %B %d at %X %Z: ")<C-M>pA
+:nnoremap <localleader>t o<Esc>"=strftime("%Y, Week %V, %A %B %d at %X %Z: ")<C-M>pA
+:nnoremap <localleader>T O<Esc>"=strftime("%Y, Week %V, %A %B %d at %X %Z: ")<C-M>pA
 
 " Interact with system clipboard
 :nnoremap <leader>p "+p
@@ -70,7 +75,18 @@ nnoremap <leader>s :Telescope live_grep<cr>
 nnoremap <leader>f :Telescope find_files<cr>
 vnoremap <localleader>s "zy:Telescope grep_string default_text=<C-r>z<cr>
 
+"Needed to help the lsp work correctly with TSX files
 au BufEnter *.tsx set ft=typescriptreact
+
+" Use escape to exit terminal
+tnoremap <Esc> <C-\><C-n>
+
+"Open a fish terminal in a split
+nnoremap <leader>t :vsplit term://fish<cr>
+nnoremap <leader>T :split term://fish<cr>
+
+set number
+set relativenumber
 
 lua require ("lsp")
 lua require ("comment")

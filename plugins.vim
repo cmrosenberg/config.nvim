@@ -24,6 +24,22 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 call plug#end()
 
+
+let g:prettier#config#print_width = 80
+let g:prettier#config#tab_width = 2
+let g:prettier#config#use_tabs = 'false'
+let g:prettier#config#semi = 'true'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#bracket_spacing = 'false'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+let g:prettier#config#arrow_parens = 'always'
+let g:prettier#config#trailing_comma = 'all'
+let g:prettier#config#parser = 'flow'
+let g:prettier#config#config_precedence = 'prefer-file'
+let g:prettier#config#prose_wrap = 'preserve'
+let g:prettier#config#html_whitespace_sensitivity = 'css'
+let g:prettier#autoformat = 0
+
 au BufEnter *.tsx set ft=typescript | nnoremap <localleader>p :Prettier<cr>
 au BufEnter *.js nnoremap <localleader>p :Prettier<cr>
 au BufEnter *.ts nnoremap <localleader>p :Prettier<cr>
