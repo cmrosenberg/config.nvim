@@ -86,7 +86,6 @@ nnoremap <leader>t :vsplit term://fish<cr>
 nnoremap <leader>T :split term://fish<cr>
 
 set number
-set relativenumber
 
 lua require ("lsp")
 lua require ("comment")
