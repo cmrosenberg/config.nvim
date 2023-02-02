@@ -34,18 +34,6 @@ set splitright
 :nnoremap <leader>y "+y
 :vnoremap <leader>y "+y
 
-:function Protocolfile()
-       :execute ("edit " . $HOME . "/protocol/"  . strftime("%Y-%m-%d") . ".md")
-:endfunction
-
-:function VSplitProtocolfile()
-       :execute ("vsplit " . $HOME . "/protocol/"  . strftime("%Y-%m-%d") . ".md")
-:endfunction
-
-:function SplitProtocolfile()
-       :execute ("split " . $HOME . "/protocol/"  . strftime("%Y-%m-%d") . ".md")
-:endfunction
-
 :nnoremap <leader>o :call Protocolfile()<cr>
 :nnoremap <localleader>o :call SplitProtocolfile()<cr>
 :nnoremap <leader>O :call VSplitProtocolfile()<cr>
@@ -54,7 +42,6 @@ set statusline=%<%f\ \| "Show filename relative to working directory
 set statusline+=\ %{''.(&fenc!=''?&fenc:&enc).''}\ \|      "Encoding
 set statusline+=\ %{&ff}\                              "FileFormat (dos/unix..)
 set statusline+=\%h%m%r%=%-14.(%l,%c%V%)\ %P "Rest of the standard options
-
 "undo
 silent !mkdir -p ~/.local/share/nvim/undo > /dev/null 2>&1
 set undodir=~/.local/share/nvim/undo
@@ -87,5 +74,10 @@ nnoremap <leader>T :split term://fish<cr>
 
 set number
 
+
 lua require ("lsp")
 lua require ("comment")
+
+if filereadable(expand("~/.config/nvim/local.vim"))
+        source ~/.config/nvim/local.vim
+endif
