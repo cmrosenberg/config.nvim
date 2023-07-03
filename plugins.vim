@@ -22,6 +22,8 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
+Plug 'udalov/kotlin-vim'
+
 call plug#end()
 
 
