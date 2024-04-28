@@ -31,3 +31,7 @@ lspconfig.tsserver.setup{
 lspconfig.pyright.setup{
         on_attach = on_attach,
 }
+
+lspconfig.clangd.setup{
+        on_attach = on_attach,
+}
