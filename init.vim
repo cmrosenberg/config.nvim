@@ -62,21 +62,10 @@ nnoremap <leader>s :Telescope live_grep<cr>
 nnoremap <leader>f :Telescope find_files<cr>
 vnoremap <localleader>s "zy:Telescope grep_string default_text=<C-r>z<cr>
 
-"Needed to help the lsp work correctly with TSX files
-au BufEnter *.tsx set ft=typescriptreact
-
-" Use escape to exit terminal
-tnoremap <Esc> <C-\><C-n>
-
-"Open a fish terminal in a split
-nnoremap <leader>t :vsplit term://fish<cr>
-nnoremap <leader>T :split term://fish<cr>
-
 set number
 
 
 lua require ("lsp")
-lua require ("comment")
 
 if filereadable(expand("~/.config/nvim/local.vim"))
         source ~/.config/nvim/local.vim
