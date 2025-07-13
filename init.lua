@@ -1,7 +1,3 @@
-if vim.fn.filereadable("~/.config/nvim/plugins.vim") == 1 then
-        require ("plugins")
-end
-
 vim.g.mapleader = ','
 vim.g.maplocalleader = ';'
 
