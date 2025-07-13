@@ -34,9 +34,9 @@ local function safe_require(module)
     return ok and result or nil
 end
 
-local has_lspconfig = safe_require('nvim-lspconfig')
+local has_lspconfig = safe_require('lspconfig')
 if has_lspconfig then
-    require ("lsp")
+        require('lsp')
 end
 
 local has_telescope = safe_require('telescope')
