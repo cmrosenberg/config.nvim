@@ -17,6 +17,8 @@ local on_attach = function(client, bufnr)
         vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, bufopts)
 
         vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, bufopts)
+
+        vim.keymap.set("n", "<leader>m", vim.lsp.buf.format, bufopts)
         end
 
 
