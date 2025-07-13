@@ -9,12 +9,12 @@ vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<leader>b', ':b#<cr>')
 vim.keymap.set('n', '<leader>c', ':close<cr>')
 vim.keymap.set('n', '<leader><cr>', '<c-]>')
-vim.keymap.set('n', '<leader>p', '+p')
-vim.keymap.set('n', '<leader>y', '+y')
+vim.keymap.set('n', '<leader>p', '"+p')
+vim.keymap.set('n', '<leader>y', '"+y')
 vim.keymap.set('n', '<c-a>', '<Nop>')
 vim.keymap.set('n', '<c-x>', '<Nop>')
-vim.keymap.set('v', '<leader>p', '+p')
-vim.keymap.set('v', '<leader>y', '+y')
+vim.keymap.set('v', '<leader>p', '"+p')
+vim.keymap.set('v', '<leader>y', '"+y')
 
 vim.o.laststatus = 2
 vim.o.sidescrolloff = 5
