@@ -29,4 +29,18 @@ vim.opt.splitright = true
 
 vim.cmd [[colorscheme habamax]]
 
-require ("lsp")
+local function safe_require(module)
+    local ok, result = pcall(require, module)
+    return ok and result or nil
+end
+
+local has_lspconfig = safe_require('nvim-lspconfig')
+if has_lspconfig then
+    require ("lsp")
+end
+
+local has_telescope = safe_require('telescope')
+if has_telescope then
+    vim.keymap.set('n', '<leader>s', ':Telescope live_grep<cr>')
+    vim.keymap.set('n', '<leader>f', ':Telescope find_files<cr>')
+end
