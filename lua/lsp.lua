@@ -24,7 +24,7 @@ lspconfig.gopls.setup{
         on_attach = on_attach,
 }
 
-lspconfig.tsserver.setup{
+lspconfig.denols.setup{
         on_attach = on_attach,
 }
 
